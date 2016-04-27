@@ -44,22 +44,22 @@ var randomQuote = {
 };
 
 
-var passQuote = function displayQuote(){
+function displayQuote(){
   for (quotes in randomQuote) {
     $("#quote").append(HTMLquote);
     
-  var quoteIndex = Math.floor(randomQuote.quotes.length * Math.random());
+  var generateIndex = Math.floor(randomQuote.quotes.length * Math.random());
   
-  var grabQuote = randomQuote.quotes[quoteIndex].quote;
+  var grabQuote = randomQuote.quotes[generateIndex].quote;
       var formatQuote = HTMLquoteContent.replace("%data%", grabQuote);
       $(".quote-entry").append(formatQuote);
   
-  var grabAuthor = randomQuote.quotes[quoteIndex].author;
+  var grabAuthor = randomQuote.quotes[generateIndex].author;
       var formatAuthor = HTMLquoteAuthor.replace("%data%", grabAuthor);
       $(".quote-entry").append(formatAuthor);
   }
 };
-passQuote();
+displayQuote();
 
 var refreshQuote = function() {
   window.location.reload();
@@ -69,7 +69,7 @@ var refreshQuote = function() {
 
 
 $(".button").on("click", function() {
-  passQuote();
+  displayQuote();
 });
 
 var tweetQuote = document.querySelector("#quote .quote-entry .show-quote").innerHTML
