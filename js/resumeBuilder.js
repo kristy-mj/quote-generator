@@ -15,8 +15,6 @@ var randomQuote = {
   ],
 };
 
-
-
 function displayQuote(){
   var quoteArray = [];
   for (quotes in randomQuote) {
@@ -31,14 +29,15 @@ function displayQuote(){
 };
 displayQuote();
 
-
+var refreshQuote = function() {
+  window.location.reload();
+}
 
 
 
 
 $('#quote').append(displayQuote)
 
-$('#quote').append(quoteButton);
 
 
 
