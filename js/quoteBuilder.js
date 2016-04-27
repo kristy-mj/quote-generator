@@ -43,15 +43,21 @@ var randomQuote = {
   ],
 };
 
+
 var passQuote = function displayQuote(){
-  var quoteArray = [];
   for (quotes in randomQuote) {
-    var grabQuote = randomQuote.quotes[Math.floor(randomQuote.quotes.length * Math.random())].quote;
-    // var grabAuthor = randomQuote.quotes[i].author;
-    // quoteArray = [grabQuote, grabAuthor];
-    quoteArray.push(grabQuote);
+    $("#quote").append(HTMLquote);
+    
+  var quoteIndex = Math.floor(randomQuote.quotes.length * Math.random());
+  
+  var grabQuote = randomQuote.quotes[quoteIndex].quote;
+      var formatQuote = HTMLquoteContent.replace("%data%", grabQuote);
+      $(".quote-entry").append(formatQuote);
+  
+  var grabAuthor = randomQuote.quotes[quoteIndex].author;
+      var formatAuthor = HTMLquoteAuthor.replace("%data%", grabAuthor);
+      $(".quote-entry").append(formatAuthor);
   }
-    return quoteArray;
 };
 passQuote();
 
@@ -59,11 +65,11 @@ var refreshQuote = function() {
   window.location.reload();
 }
 
-$('#quote').append(passQuote)
+
 
 
 $(".button").on("click", function() {
   passQuote();
 });
 
-$('.twitter-share-button').attr('href', "https://twitter.com/intent/tweet?text=" + passQuote);
+$('.twitter-share-button').attr('href', "https://twitter.com/intent/tweet?text=" + "kdajshfksaj");

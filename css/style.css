@@ -14,16 +14,6 @@ h6 {
   font-family: "Roboto", sans-serif;
 }
 
-.clear-fix {
-  overflow: auto;
-}
-
-.education-entry,
-.work-entry,
-.project-entry {
-  padding: 0 5%;
-}
-
 h1 {
   font-size: 40px;
   color: #f5a623;
@@ -124,57 +114,18 @@ a {
   background-color: #f3f3f3;
   padding-bottom: 10px;
   clear:both;
-}
-
-.dark-gray {
-  background-color: #4a4a4a;
-}
-
-/* TODO: Replace with image later */
-#header {
-  background-color: #484848;
-}
-
-.flex-box {
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 10px;
-}
-
-.center-content {
-  padding: 2.5% 5%;
-}
+}s
 
 ul {
   list-style-type: none;
 }
 
-.biopic {
-  float: left;
-  padding: 10px;
-  width: 200px;
-  display: none;
-}
-
 img {
   padding: 10px;
-  /* box-shadow:  5px 5px 5px #efefef; */
 }
 
 span {
   padding: 5px;
-}
-
-#lets-connect {
-  text-align: center;
-}
-
-img {
-  width: 40%;
-  max-height: 40%;
 }
 
 /* Media queries to handle various device widths */
@@ -216,8 +167,3 @@ img {
 }
 
 @media only screen and (min-width: 750px) {
-  #skills-h3,
-  .biopic {
-    display: block;
-  }
-}
