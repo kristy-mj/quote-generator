@@ -66,4 +66,4 @@ $(".button").on("click", function() {
   displayQuote();
 });
 
-
+$('.twitter-share-button').attr('href', "https://twitter.com/intent/tweet?text="+encodeURIComponent(displayQuote()));
