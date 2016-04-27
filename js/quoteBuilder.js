@@ -43,7 +43,7 @@ var randomQuote = {
   ],
 };
 
-function displayQuote(){
+var passQuote = function displayQuote(){
   var quoteArray = [];
   for (quotes in randomQuote) {
     var grabQuote = randomQuote.quotes[Math.floor(randomQuote.quotes.length * Math.random())].quote;
@@ -53,17 +53,17 @@ function displayQuote(){
   }
     return quoteArray;
 };
-displayQuote();
+passQuote();
 
 var refreshQuote = function() {
   window.location.reload();
 }
 
-$('#quote').append(displayQuote)
+$('#quote').append(passQuote)
 
 
 $(".button").on("click", function() {
-  displayQuote();
+  passQuote();
 });
 
-$('.twitter-share-button').attr('href', "https://twitter.com/intent/tweet?text=" + displayQuote());
+$('.twitter-share-button').attr('href', "https://twitter.com/intent/tweet?text=" + passQuote);
