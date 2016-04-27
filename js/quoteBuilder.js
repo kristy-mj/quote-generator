@@ -72,4 +72,6 @@ $(".button").on("click", function() {
   passQuote();
 });
 
-$('.twitter-share-button').attr('href', "https://twitter.com/intent/tweet?text=" + "kdajshfksaj");
+var tweetQuote = document.querySelector("#quote .quote-entry .show-quote").innerHTML
+var tweetAuthor = document.querySelector("#quote .quote-entry .show-author").innerHTML
+$('.twitter-share-button').attr('href', "https://twitter.com/intent/tweet?text=" + tweetQuote + " - " + tweetAuthor);
