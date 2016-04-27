@@ -65,9 +65,6 @@ var refreshQuote = function() {
   window.location.reload();
 }
 
-
-
-
 $(".button").on("click", function() {
   displayQuote();
 });
