@@ -5,25 +5,41 @@ var randomQuote = {
       "author": "Alice Roosevelt Longworth"
     },
     {
-      "quote": "Do not take life too seriously. You will never get out of it alive.",
-      "author": "Elbert Hubbard"
-    },
-    {
       "quote": "Wassuuuuuuuuup",
       "author": "Scary Movie 1"
+    },
+    {
+      "quote": "Do not take life too seriously. You will never get out of it alive.",
+      "author": "Elbert Hubbard"
     }
   ],
-
 };
 
+
+
 function displayQuote(){
-  for (quote in randomQuote.quotes) {
-    $('#quote').append(HTMLquote);
-    var formattedQuote = HTMLquoteContent.replace('%data%', randomQuote.quotes[quote].quote);
-    $('.quote-entry').append(formattedQuote);
+  var quoteArray = [];
+  for (quotes in randomQuote) {
+    var grabQuote = randomQuote.quotes[Math.floor(randomQuote.quotes.length * Math.random())].quote;
+    // var grabAuthor = randomQuote.quotes[i].author;
+    // quoteArray = [grabQuote, grabAuthor];
+    quoteArray.push(grabQuote);
   }
+    return quoteArray;
+
+
 };
 displayQuote();
 
+
+
+
+
+
+$('#quote').append(displayQuote)
+
 $('#quote').append(quoteButton);
+
+
+
 
