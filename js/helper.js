@@ -1,6 +1,6 @@
 var HTMLquote = '<div class="quote-entry"></div>';
-var HTMLquoteContent = '<span class="show-quote">%data%</span><hr>';
-var HTMLquoteAuthor = '<span class="show-author">%data%</span><hr>';
+var HTMLquoteContent = '<div class="show-quote">%data%</div><br>';
+var HTMLquoteAuthor = '<div class="show-author">%data%</div><br>';
 
 
 /*
