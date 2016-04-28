@@ -46,7 +46,7 @@ var randomQuote = {
 
 function displayQuote(){
   for (quotes in randomQuote) {
-    $("#quote").append(HTMLquote);
+    $("#quote").html(HTMLquote);
     
   var generateIndex = Math.floor(randomQuote.quotes.length * Math.random());
   
@@ -61,11 +61,8 @@ function displayQuote(){
 };
 displayQuote();
 
-var refreshQuote = function() {
-  window.location.reload();
-}
 
-$(".button").on("click", function() {
+$("#new-quote").on("click", function(event) {
   displayQuote();
 });
 
